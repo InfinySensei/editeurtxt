@@ -10,18 +10,11 @@ public class CommandeRemplacer extends CommandeDocument{
 
     @Override
     public void executer() {
-        String[] tab = new String[3];
-        int index = 0;
-        for (int i=10; i<parameters.length; i++) {
-            if (parameters[i].equals(";")) {
-                index += 1;
-            }
-            else {
-                tab[index] = tab[index] + parameters[i];
-            }
+        if(parameters.length < 4) {
+            System.err.println("Format attendu : remplacer;debut;fin;chaine");
+            return;
         }
-        System.out.println(tab[0]);
-        this.document.remplacer(Integer.parseInt(tab[0]), Integer.parseInt(tab[1]), tab[2]);
+        this.document.remplacer(Integer.parseInt(parameters[1]),Integer.parseInt(parameters[2]),parameters[3]);
         super.executer();
     }
 
