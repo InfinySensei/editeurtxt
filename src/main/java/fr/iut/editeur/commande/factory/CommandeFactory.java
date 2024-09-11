@@ -16,6 +16,13 @@ public class CommandeFactory {
 
     private CommandeFactory() {}
 
+    /**
+    * blablabla 
+    * @param name nom du truc
+    * @param document Document sur lequel on va travailler
+    * @param parameters spécifications de la commande
+    * @return null par défaut
+    */
     public Commande createCommand(String name, Document document, String[] parameters) {
         switch (name) {
             case "ajouter" : return new CommandeAjouter(document, parameters);
