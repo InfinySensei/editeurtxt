@@ -1,17 +1,34 @@
 package fr.iut.editeur.document;
 
+/**
+* Classe document simule un doucment composé d'un texte.
+*/
 public class Document {
 
+    /**
+    * chaine de caractère composant le contenu du document
+    */
     private String texte;
 
+    /**
+    * Constructeur
+    */
     public Document() {
         this.texte = "";
     }
-	
+
+    /**
+    * getTexte
+    * @return texte du document
+    */
     public String getTexte() {
         return texte;
     }
 
+    /**
+    * setetxte
+    * @param String texte, nouveau contenu du document
+    */
     public void setTexte(String texte) {
         this.texte = texte;
     }
